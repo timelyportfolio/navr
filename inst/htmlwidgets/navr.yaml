@@ -1,7 +1,6 @@
-# (uncomment to add a dependency)
-# dependencies:
-#  - name:
-#    version:
-#    src:
-#    script:
-#    stylesheet:
+dependencies:
+  - name: responsive-nav.js
+    version: 1.0.34
+    src: htmlwidgets/lib/responsive-nav.js
+    script: responsive-nav.min.js
+    stylesheet: responsive-nav.css
