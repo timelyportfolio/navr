@@ -87,7 +87,7 @@ tagList(
     # use HTML instead of tags
     ,taglist = HTML("
       <ul>
-        <li><a onclick = 'javascript:void(exportSVG())' href = '#diagram-needs-toolbar'>Export to SVG</a></li>
+        <li><a onclick = 'exportSVG()' href = '#diagram-needs-toolbar'>Export to SVG</a></li>
       </ul>
     "
     )
