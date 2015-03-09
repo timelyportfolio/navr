@@ -3,4 +3,4 @@ dependencies:
     version: 1.0.34
     src: htmlwidgets/lib/responsive-nav.js
     script: responsive-nav.min.js
-    stylesheet: responsive-nav.css
+    stylesheet: [responsive-nav.css, responsive-nav-advanced.css]
