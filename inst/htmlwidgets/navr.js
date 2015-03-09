@@ -6,15 +6,28 @@ HTMLWidgets.widget({
 
   initialize: function(el, width, height) {
 
-    return {
-      // TODO: add instance fields as required
-    }
+    return {}
 
   },
 
   renderValue: function(el, x, instance) {
 
-    el.innerText = x.message;
+    // create a new div for our toolbar
+    var navDiv = document.createElement("nav");
+    navDiv.id = "nav-" + el.id
+    // add the items from the taglist into our div
+    navDiv.innerHTML = x.taglist;
+
+    // get the selector provided so we can add our navDiv
+    var navContainer = document.querySelectorAll( x.selector )[0]
+    // add our navDiv as the first element in the container
+    navContainer.insertBefore(navDiv, navContainer.firstChild)
+
+
+    var nav = responsiveNav(
+      navDiv.id,
+      x.options
+    );
 
   },
 
