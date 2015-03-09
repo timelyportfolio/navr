@@ -1,0 +1,30 @@
+---
+title: "Usage Examples for navr"
+author: "Kenton Russell"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Usage Examples for navr}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r echo = F}
+### get knitr just the way we like it
+
+knitr::opts_chunk$set(
+  message = FALSE
+  , warning = FALSE
+  , error = FALSE
+  , tidy = FALSE
+  , cache = FALSE
+  #, results = 'asis'
+)
+```
+
+### Getting Started
+`navr` has not achieved CRAN status yet, so for now we will install with `devtools::install_github` as shown in the code below.
+
+```{r eval = F}
+devtools::install_github("timelyportfolio/navr")
+```
