@@ -19,6 +19,8 @@
 .nav-collapse li {
   float: left;
   width: 100%;
+  cursor: pointer;
+  background: #989898;
 }
 
 @media screen and (min-width: 40em) {
