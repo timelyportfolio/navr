@@ -4,10 +4,10 @@
 \alias{add_hover}
 \title{Hover Effects for \code{navr}}
 \usage{
-add_hover(navr = NULL, effect = "grow")
+add_hover(nav = NULL, effect = NULL)
 }
 \arguments{
-\item{navr}{\code{navr} htmlwidget to which we will apply hover effects}
+\item{nav}{\code{navr} htmlwidget to which we will apply hover effects}
 
 \item{effect}{\code{string} hover effect which we would like to apply.  For options,
          see \href{http://ianlunn.github.io/Hover/}{Hover Effects}.}

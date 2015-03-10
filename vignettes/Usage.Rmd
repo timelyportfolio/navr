@@ -108,3 +108,74 @@ tagList(
 )
 ```
 
+
+### Stylish Hover Effects
+We can apply these stylish [hover effects](http://ianlunn.github.io/Hover/) from [Ian Lunn](https://github.com/IanLunn) with the helper function `add_hover`.  There are lots of different effects.  Let's try `pop` and `float`.
+
+```{r}
+library(htmltools)
+library(navr)
+
+# build a simple nav
+n1 <- navr(
+  selector = "#pop-toolbar"
+  ,taglist = tagList(
+    tags$ul(
+      tags$li(style="border: solid 0.1em white;","Popper")
+      ,tags$li(style="border: solid 0.1em white;","Popping")
+    )
+  )
+)
+# make a copy to show another effect
+n2 <- n1
+n2$x$taglist = tagList(
+  tags$ul(
+    tags$li(style="border: solid 0.1em white;","Floater")
+    ,tags$li(style="border: solid 0.1em white;","Floating")
+  )
+)
+
+
+tagList(
+  tags$div(
+    id = "pop-toolbar"
+    ,style="width:300px;height:300px;border: dashed 0.2em lightgray;"
+    ,tags$h3("Hover Effects")
+    ,"Hover effects are nice and let our users know that our
+      navr actually does something.  Just wait until you see our navr with icons."
+  )
+  ,add_hover(n1,"pop")
+  ,add_hover(n2,"float")
+)
+```
+
+### Awesome Font-Awesome Icons
+
+Font-Awesome are the nice open-source MIT-licensed icons in Bootstrap.  `add_font` makes it easy to use these icons in our toolbar.  Even neater, the hover effects shown below play very nicely with Font-Awesome, so I would encourage `add_hover` + `add_font_awesome`.  *If you're in shiny, no need to use `add_font_awesome` since Bootstrap already gives you these icons.*
+
+```{r}
+library(htmltools)
+library(navr)
+
+# build a simple nav
+n1 <- navr(
+  selector = "#icon-toolbar"
+  ,taglist = tagList(
+    tags$ul(
+      tags$li(style="border: solid 0.1em white;height:100px;width:100px;", tags$span(class="fa fa-beer fa-5x",style="height;100%;width:100%"))
+      ,tags$li(style="border: solid 0.1em white;height:100px;width:100px;",  tags$span(class="fa fa-bell fa-5x",""))
+    )
+  )
+)
+
+tagList(
+  tags$div(
+    id = "icon-toolbar"
+    ,style="width:300px;height:300px;border: dashed 0.2em lightgray; float:left;"
+    ,tags$h3("Icon with Hover Effects")
+    ,"Hover effects are even nicer when they work with icons, especially our easy
+    to add Font-Awesome icons."
+  )
+  ,add_hover(add_font_awesome(n1),"fade")
+)
+```

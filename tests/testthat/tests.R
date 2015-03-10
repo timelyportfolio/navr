@@ -8,7 +8,9 @@ test_that( "navr makes a htmlwidget ", {
 })
 
 test_that( "navr checks for bad parameters",{
+  # should throw error if selector not a character
   expect_error( navr( NULL ) )
+  # should throw error if taglist not a htmltools::tagList or a htmltools::HTML
   expect_error( navr(taglist = "") )
   # NULL or empty list should be valid for options, so no error here
   #   just warning for a taglist with length == 0
