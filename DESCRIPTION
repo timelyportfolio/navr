@@ -1,12 +1,23 @@
 Package: navr
 Type: Package
-Title: What the Package Does (Title Case)
+Title: htmlwidget for Responsive-Nav
 Version: 0.1
 Date: 2015-03-09
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Authors@R: c(
+    person("Viljami", "", role = c("aut", "cph"), comment = "Responsive-Nav.js
+    library in htmlwidgets/lib, http://responsive-nav.com/"),
+    person("Ian", "Lunn", role = c("aut", "cph"), comment = "hover effects
+    css, ianlunn.github.io/Hover/"),
+    person("Dave", "Gundy", role = c("aut", "cph"), comment = "Font-Awesome
+    library in htmlwidgets/lib, https://github.com/FortAwesome/Font-Awesome"),
+    person("Kenton", "Russell", role = c("aut", "cre"), comment = "R
+    interface", email = "kent.russell@timelyportfolio.com")
+    )
+Maintainer: Kenton Russell <kent.russell@timelyportfolio.com>
+Description: Add responsive toolbars to your web content in all contexts.
+              Tiny and dependency-free JavaScript component that should pair nicely
+              with your interactive components.
+License: MIT + file LICENSE
 LazyData: TRUE
 Suggests: testthat,
     knitr,
