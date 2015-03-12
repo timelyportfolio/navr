@@ -4,7 +4,7 @@
 \alias{add_font_awesome}
 \title{Easy Icons for \code{navr}}
 \usage{
-add_font_awesome(nav)
+add_font_awesome(nav = NULL)
 }
 \value{
 \code{navr} htmlwidget with Font-Awesome dependencies attached.
